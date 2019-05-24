@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Marvel Challenge</string>
+    <string name="characters_list_title">Characters</string>
+    <string name="characters_favorite_list_title">Favorites</string>
+    <string name="character_photo">Character photo</string>
+    <string name="favorite">Favorite the character</string>
+</resources>
