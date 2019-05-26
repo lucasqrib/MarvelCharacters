@@ -1,4 +1,4 @@
-package lucasqrib.com.br.data.remote.models.api
+package lucasqrib.com.br.data.remote.api
 
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -21,7 +21,7 @@ object ApiProvider {
             .build().create(Api::class.java)
     }
 
-    private fun provideOkttp(): OkHttpClient {
+     fun provideOkttp(): OkHttpClient {
         val interceptor = HttpLoggingInterceptor()
         interceptor.level = HttpLoggingInterceptor.Level.BASIC
         return OkHttpClient.Builder().let {

@@ -6,6 +6,9 @@ import androidx.viewpager.widget.ViewPager
 import kotlinx.android.synthetic.main.activity_item_list.*
 import kotlinx.android.synthetic.main.characters_list_view.*
 import lucasqrib.com.br.marvelchallenge.R
+import lucasqrib.com.br.marvelchallenge.characters.CharacterVO
+import lucasqrib.com.br.marvelchallenge.characters.detail.CharacterDetailActivity
+import lucasqrib.com.br.marvelchallenge.characters.detail.CharacterDetailFragment
 
 class CharacterListActivity : AppCompatActivity(), ViewPager.OnPageChangeListener {
 
@@ -20,6 +23,16 @@ class CharacterListActivity : AppCompatActivity(), ViewPager.OnPageChangeListene
             isTablet = true
         }
         setupViewPager()
+    }
+
+    fun initDetail(character: CharacterVO) {
+        if (isTablet)
+            supportFragmentManager?.beginTransaction()
+                ?.replace(R.id.character_detail_container, CharacterDetailFragment.newInstance(character))
+                ?.commit()
+        else {
+            startActivity(CharacterDetailActivity.newIntent(this, character))
+        }
     }
 
     private fun setupViewPager() {

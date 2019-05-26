@@ -4,4 +4,8 @@
     <string name="characters_favorite_list_title">Favorites</string>
     <string name="character_photo">Character photo</string>
     <string name="favorite">Favorite the character</string>
+	<string name="network_error_message">Não foi possível estabelecer conexão</string>
+	<string name="empty_state_message">Nenhum valor encontrado para a busca.</string>
+	<string name="server_error_message">Houve um erro ao buscar, tente mais tarde.</string>
+	<string name="character_image">Imagem do personagem</string>
 </resources>
